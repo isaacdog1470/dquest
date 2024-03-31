@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Layouts and Enemies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .navbar {
+            background-color: #000000;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-evenly;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            border-bottom: 2px solid #ccc;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .navbar a:hover {
+            background-color: #3F8749;
+        }
+        .container {
+            max-width: 800px;
+            margin: 70px auto 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center align the content */
+        }
+        .hotbar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .hotbar button {
+            background-color: #f1f1f1;
+            border: none;
+            color: black;
+            padding: 10px 2%;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: calc((100% - 6%) / 3); /* Set button width based on screen width */
+        }
+        .hotbar button:hover {
+            background-color: #ddd;
+        }
+        h1 {
+            text-align: center;
+        }
+        .map {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .area {
+            flex: 1;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+        }
+        .area h2 {
+            text-align: center;
+        }
+        .area ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+        .area ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="wikipedia.html">Wikipedia</a>
+        <a href="map_layouts.html">Map Layouts</a>
+        <a href="hire_and_promotion.html">Hire and Promotion</a>
+        <a href="informations.html">Informations</a>
+    </div>
+
+    <div class="container">
+        <h1>Map Layouts and Enemies</h1>
+        
+        <!-- Hotbar with buttons for each area -->
+        <div class="hotbar">
+            <button onclick="showArea('sahara_desert')">Sahara Desert (0-10)</button>
+            <button onclick="showArea('forest')">Forest (10-20)</button>
+            <button onclick="showArea('heroic_cliffs')">Heroic Cliffs (20-30)</button>
+        </div>
+
+        <!-- Map Layouts -->
+        <div class="map">
+            <!-- Sahara Desert -->
+            <div id="sahara_desert" class="area">
+                <h2>Sahara Desert (0-10)</h2>
+                <p>The Sahara Desert is a vast expanse of sand and dunes, known for its scorching temperatures and harsh conditions. It is home to various enemies, including:</p>
+                <ul>
+                    <li>Husks</li>
+                    <li>Skeletons</li>
+                    <li>Rare Sand Elemental</li>
+                </ul>
+                <!-- Additional information about the area can be added here -->
+            </div>
+
+            <!-- Forest -->
+            <div id="forest" class="area" style="display: none;">
+                <h2>Forest (10-20)</h2>
+                <p>The forest is a dense and lush area with towering trees and abundant wildlife. Adventurers will encounter the following enemies:</p>
+                <ul>
+                    <li>Zombies</li>
+                    <li>Skeletons</li>
+                    <li>Forest Spirit</li>
+                </ul>
+                <!-- Additional information about the area can be added here -->
+            </div>
+
+            <!-- Heroic Cliffs -->
+            <div id="heroic_cliffs" class="area" style="display: none;">
+                <h2>Heroic Cliffs (20-30)</h2>
+                <p>The Heroic Cliffs are towering cliffs overlooking vast landscapes. Brave souls who venture here will face formidable enemies such as:</p>
+                <ul>
+                    <li>Undeads</li>
+                    <li>Goblins</li>
+                    <li>Ancient Hero</li>
+                </ul>
+                <!-- Additional information about the area can be added here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showArea(areaId) {
+            // Hide all areas
+            var areas = document.querySelectorAll('.area');
+            areas.forEach(function(area) {
+                area.style.display = 'none';
+            });
+
+            // Show the selected area
+            var selectedArea = document.getElementById(areaId);
+            if (selectedArea) {
+                selectedArea.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

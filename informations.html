@@ -1,0 +1,234 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dquest Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .navbar {
+            background-color: #000000;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-evenly;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            border-bottom: 2px solid #ccc;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .navbar a:hover {
+            background-color: #3F8749;
+        }
+        .container {
+            max-width: 800px;
+            margin: 70px auto 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center align the content */
+        }
+        .hotbar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .hotbar button {
+            background-color: #f1f1f1;
+            border: none;
+            color: black;
+            padding: 10px 2%;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: calc((100% - 6%) / 4); /* Set button width based on screen width */
+        }
+        .hotbar button:hover {
+            background-color: #ddd;
+        }
+        h1 {
+            text-align: center;
+        }
+        .category {
+            margin-bottom: 20px;
+        }
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: inline-block; /* Added to display the tabs inline */
+        }
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            transition: 0.3s;
+            border-radius: 5px;
+            width: 25%; /* Each tab button takes up 25% of the container width */
+        }
+        .tab button:hover {
+            background-color: #ddd;
+        }
+        .tab button.active {
+            background-color: #ccc;
+        }
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border-top: none;
+        }
+        h3 {
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+        }
+        .info-item {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .info-item img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="wikipedia.html">Wikipedia</a>
+        <a href="map_layouts.html">Map Layouts</a>
+        <a href="hire_and_promotion.html">Hire and Promotion</a>
+        <a href="informations.html">Information</a>
+    </div>
+
+    <div class="container">
+        <h1>Dquest Information</h1>
+        
+        <div class="hotbar">
+            <button class="tablinks" onclick="openTab(event, 'items')">Items</button>
+            <button class="tablinks" onclick="openTab(event, 'commands')">Commands</button>
+            <button class="tablinks" onclick="openTab(event, 'abilities')">Abilities</button>
+            <button class="tablinks" onclick="openTab(event, 'set_bonuses')">Set Bonuses</button>
+        </div>
+        
+        <!-- Items Tab -->
+        <div id="items" class="tabcontent">
+            <div class="info-item">
+                <img src="item1.png" alt="Item 1">
+                <h3>Item 1</h3>
+                <p>Description of Item 1.</p>
+            </div>
+            <div class="info-item">
+                <img src="item2.png" alt="Item 2">
+                <h3>Item 2</h3>
+                <p>Description of Item 2.</p>
+            </div>
+            <div class="info-item">
+                <img src="item3.png" alt="Item 3">
+                <h3>Item 3</h3>
+                <p>Description of Item 3.</p>
+            </div>
+        </div>
+
+        <!-- Commands Tab -->
+        <div id="commands" class="tabcontent">
+            <div class="info-item">
+                <img src="command1.png" alt="Command 1">
+                <h3>Command 1</h3>
+                <p>Description of Command 1.</p>
+            </div>
+            <div class="info-item">
+                <img src="command2.png" alt="Command 2">
+                <h3>Command 2</h3>
+                <p>Description of Command 2.</p>
+            </div>
+            <div class="info-item">
+                <img src="command3.png" alt="Command 3">
+                <h3>Command 3</h3>
+                <p>Description of Command 3.</p>
+            </div>
+        </div>
+
+        <!-- Abilities Tab -->
+        <div id="abilities" class="tabcontent">
+            <div class="info-item">
+                <img src="ability1.png" alt="Ability 1">
+                <h3>Ability 1</h3>
+                <p>Description of Ability 1.</p>
+            </div>
+            <div class="info-item">
+                <img src="ability2.png" alt="Ability 2">
+                <h3>Ability 2</h3>
+                <p>Description of Ability 2.</p>
+            </div>
+            <div class="info-item">
+                <img src="ability3.png" alt="Ability 3">
+                <h3>Ability 3</h3>
+                <p>Description of Ability 3.</p>
+            </div>
+        </div>
+
+        <!-- Set Bonuses Tab -->
+        <div id="set_bonuses" class="tabcontent">
+            <div class="info-item">
+                <img src="set_bonus1.png" alt="Set Bonus 1">
+                <h3>Set Bonus 1</h3>
+                <p>Description of Set Bonus 1.</p>
+            </div>
+            <div class="info-item">
+                <img src="set_bonus2.png" alt="Set Bonus 2">
+                <h3>Set Bonus 2</h3>
+                <p>Description of Set Bonus 2.</p>
+            </div>
+            <div class="info-item">
+                <img src="set_bonus3.png" alt="Set Bonus 3">
+                <h3>Set Bonus 3</h3>
+                <p>Description of Set Bonus 3.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

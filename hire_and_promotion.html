@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire and Promotion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .navbar {
+            background-color: #000000;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-evenly;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            border-bottom: 2px solid #ccc;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .navbar a:hover {
+            background-color: #3F8749;
+        }
+        .container {
+            max-width: 800px;
+            margin: 70px auto 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center align the content */
+        }
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: inline-block; /* Added to display the tabs inline */
+        }
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            transition: 0.3s;
+            border-radius: 5px;
+            width: 25%; /* Each tab button takes up 25% of the container */
+        }
+        .tab button:hover {
+            background-color: #ddd;
+        }
+        .tab button.active {
+            background-color: #ccc;
+        }
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border-top: none;
+        }
+        /* Media queries */
+        @media screen and (max-width: 600px) {
+            .tab button {
+                width: 100%; /* Each tab button takes up 100% of the container on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="wikipedia.html">Wikipedia</a>
+        <a href="map_layouts.html">Map Layouts</a>
+        <a href="hire_and_promotion.html">Hire and Promotion</a>
+        <a href="informations.html">Informations</a>
+    </div>
+
+    <div class="container">
+        <h1>Hire and Promotion</h1>
+        
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'builder')">Builder</button>
+            <button class="tablinks" onclick="openTab(event, 'developer')">Developer</button>
+            <button class="tablinks" onclick="openTab(event, 'helper')">Helper</button>
+            <button class="tablinks" onclick="openTab(event, 'current_staff')">Staff</button>
+        </div>
+
+        <!-- Builder Tab -->
+        <div id="builder" class="tabcontent">
+            <h2>Builder</h2>
+            <p>Builders are responsible for creating and designing various structures within the server. They must possess a combination of creative skills and technical knowledge.</p>
+            <h3>Requirements:</h3>
+            <ul>
+                <li>General and basic knowledge of WorldEdit</li>
+                <li>Familiarity with WorldEdit addons like Vortex</li>
+                <li>Portfolio or images showcasing previous builds</li>
+                <li>Basic knowledge of the base game mechanics</li>
+            </ul>
+            <h3>Optional:</h3>
+            <ul>
+                <li>Have previous experience with creating dungeons or simular</li>
+                <li>Know color palets</li>
+            </ul>
+            <a href="application_form.html" style="text-decoration: none;">
+                <button style="padding: 10px 20px; margin-top: 20px; border: none; border-radius: 5px; background-color: #3F8749; color: #fff; cursor: pointer;">
+                Apply Now
+                </button>
+            </a>
+        </div>
+
+        <!-- Developer Tab -->
+        <div id="developer" class="tabcontent">
+            <h2>Developer</h2>
+            <p>Developers play a crucial role in implementing server features, fixing bugs, and optimizing performance. They must have strong programming skills and a deep understanding of Minecraft mechanics.</p>
+            <h3>Requirements:</h3>
+            <ul>
+                <li>Basic knowledge of GUIs, functions, and their returns</li>
+                <li>Familiarity with mob plugins and mechanics</li>
+                <li>At least 6 months of Skript experience</li>
+                <li>Previous work on at least 1 server</li>
+                <li>Ability to work effectively in a team environment</li>
+            </ul>
+            <h3>Optional:</h3>
+            <ul>
+                <li>Experience with resource packs or pixel art</li>
+                <li>Experience with HTML, css, javascript</li>
+                <li>Experience with SQL databases</li>
+            </ul>
+            <a href="application_form.html" style="text-decoration: none;">
+                <button style="padding: 10px 20px; margin-top: 20px; border: none; border-radius: 5px; background-color: #3F8749; color: #fff; cursor: pointer;">
+                Apply Now
+                </button>
+            </a>
+        </div>
+
+        <!-- Helper Tab -->
+        <div id="helper" class="tabcontent">
+            <h2>Helper</h2>
+            <p>Helpers provide assistance to players, answer questions, and enforce server rules. They must have excellent communication skills and a thorough understanding of server policies.</p>
+            <h3>Requirements:</h3>
+            <ul>
+                <li>Good understanding of server rules and policies</li>
+                <li>Excellent communication and interpersonal skills</li>
+                <li>Ability to remain calm and patient in stressful situations</li>
+            </ul>
+            <a href="application_form.html" style="text-decoration: none;">
+                <button style="padding: 10px 20px; margin-top: 20px; border: none; border-radius: 5px; background-color: #3F8749; color: #fff; cursor: pointer;">
+                Apply Now
+                </button>
+            </a>
+        </div>
+
+        <!-- Current Staff Tab -->
+        <div id="current_staff" class="tabcontent">
+            <h2>Current Staff</h2>
+            <div>
+                <h3>Owner</h3>
+                <p>_125</p>
+            </div>
+            <div>
+                <h3>Manager</h3>
+                <p>xDadx</p>
+            </div>
+            <div>
+                <h3>Admins</h3>
+                <p>Blanky blank blank</p>
+                <p>Blanky blank blank</p>
+            </div>
+            <div>
+                <h3>Developers</h3>
+                <p>Isaactheprolol</p>
+            </div>
+            <div>
+                <h3>Builders</h3>
+                <p>Sr. Froguis</p>
+            </div>
+            <div>
+                <h3>Mods</h3>
+                <p>Blanky blank blank</p>
+                <p>Blanky blank blank</p>
+            </div>
+            <div>
+                <h3>Helpers</h3>
+                <p>Blanky blank blank</p>
+                <p>Blanky blank blank</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

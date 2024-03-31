@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Dquest</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* White background */
+            text-align: center;
+            color: #333333; /* Dark gray text */
+            overflow-x: hidden; /* Hide horizontal overflow */
+        }
+        .container {
+            padding: 20px;
+        }
+        .navbar {
+            background-color: #000000; /* Black navbar */
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-evenly;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            border-bottom: 2px solid #ccc;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .navbar a:hover {
+            background-color: #3F8749;
+        }
+        h1 {
+            font-size: 48px; /* Larger title */
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 20px; /* Larger text */
+            margin-bottom: 20px;
+        }
+        #animatedTitle {
+            animation: pulse 1s infinite alternate; /* Pulse animation for the title */
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(0.95); /* Slightly smaller size */
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .button {
+            background-color: #444444; /* Dark gray button */
+            color: #ffffff; /* White text */
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #555555; /* Darker gray on hover */
+        }
+        .discord-button {
+            background-color: #7289DA; /* Discord blue */
+        }
+        .discord-button:hover {
+            background-color: #5865A9; /* Darker blue on hover */
+        }
+        .update-info {
+            font-size: 20px; /* Larger text for update info */
+            margin-bottom: 40px; /* Increase space after update info */
+            text-align: left; /* Align update info to the left */
+            padding: 0 20%; /* Add padding to the sides */
+        }
+        .logo {
+            width: 200px; /* Set width for the logo */
+            height: 200px; /* Set height for the logo */
+            border-radius: 50%; /* Make the logo circular */
+            margin: 70px auto 20px; /* Adjust top margin */
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="wikipedia.html">Wikipedia</a>
+        <a href="map_layouts.html">Map Layouts</a>
+        <a href="hire_and_promotion.html">Hire and Promotion</a>
+        <a href="informations.html">Informations</a>
+    </div>
+    <div class="container">
+        <img src="dungeon.png" alt="Dquest Dungeon" class="logo"> <!-- Circular logo -->
+        <h1 id="animatedTitle">Welcome to Dquest</h1>
+        <p>A thrilling adventure awaits you in the Dquest Minecraft Dungeon Server. Explore mysterious realms, battle fearsome creatures, and uncover hidden treasures!</p>
+        <p>Join us for an epic journey through dungeons and landscapes filled with challenges and excitement.</p>
+        <p>More information about our server:</p>
+        <ul>
+            <li>Multiple themed dungeons to explore</li>
+            <li>Customizable characters with unique abilities</li>
+            <li>Regular events and competitions</li>
+            <li>Active community and helpful staff</li>
+        </ul>
+        <p class="update-info">Recent Update (Version 1.01): Added quests, clans, leveling, and more! Embark on new adventures and conquer the latest challenges!</p> <!-- Update Info -->
+        <a href="https://discord.gg/bk6j4zEC4d" class="button discord-button">Join our Discord</a>
+    </div>
+</body>
+</html>

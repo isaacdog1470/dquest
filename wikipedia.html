@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dquest Bestiary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .navbar {
+            background-color: #000000;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-evenly;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            border-bottom: 2px solid #ccc;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .navbar a:hover {
+            background-color: #3F8749;
+        }
+        .container {
+            max-width: 800px;
+            margin: 70px auto 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center align the content */
+        }
+        .hotbar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .hotbar button {
+            background-color: #f1f1f1;
+            border: none;
+            color: black;
+            padding: 10px 2%;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: calc((100% - 6%) / 2); /* Set button width based on screen width */
+        }
+        .hotbar button:hover {
+            background-color: #ddd;
+        }
+        h1 {
+            text-align: center;
+        }
+        .category {
+            margin-bottom: 20px;
+        }
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: inline-block; /* Added to display the tabs inline */
+        }
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            transition: 0.3s;
+            border-radius: 5px;
+            width: 50%; /* Each tab button takes up 50% of the container */
+        }
+        .tab button:hover {
+            background-color: #ddd;
+        }
+        .tab button.active {
+            background-color: #ccc;
+        }
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border-top: none;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+        }
+        h3 {
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="wikipedia.html">Wikipedia</a>
+        <a href="map_layouts.html">Map Layouts</a>
+        <a href="hire_and_promotion.html">Hire and Promotion</a>
+        <a href="informations.html">Informations</a>
+    </div>
+
+    <div class="container">
+        <h1>Dquest Bestiary</h1>
+        
+        <div class="hotbar">
+            <button class="tablinks" onclick="openItem(event, 'skeletons')">Skeletons</button>
+            <button class="tablinks" onclick="openItem(event, 'zombies')">Zombies</button>
+            <button class="tablinks" onclick="openItem(event, 'ghouls')">Ghouls</button>
+            <button class="tablinks" onclick="openItem(event, 'undead')">Undead</button>
+            <button class="tablinks" onclick="openItem(event, 'goblins')">Goblins</button>
+            <button class="tablinks" onclick="openItem(event, 'sand_elemental')">Rare Sand Elemental</button>
+            <button class="tablinks" onclick="openItem(event, 'forest_spirit')">Forest Spirit</button>
+            <button class="tablinks" onclick="openItem(event, 'ancient_heroes')">Ancient Heroes</button>
+        </div>
+        
+        <div class="category">
+            <div id="skeletons" class="tabcontent">
+                <div>
+                    <img src="skeleton.png" alt="Skeleton">
+                    <h3>Skeleton</h3>
+                    <p>A basic enemy in Minecraft. Armed with a bow and arrows, skeletons are ranged attackers.</p>
+                </div>
+                <div>
+                    <img src="bone_armor.png" alt="Bone Armor">
+                    <h3>Bone Armor</h3>
+                    <p>Armor crafted from bones dropped by skeletons. Provides protection against ranged attacks.</p>
+                </div>
+                <div>
+                    <img src="bone_bow.gif" alt="Bone Bow">
+                    <h3>Bone Bow</h3>
+                    <p>A bow crafted from bones. Used to shoot arrows at enemies from a distance.</p>
+                </div>
+            </div>
+            <div id="zombies" class="tabcontent">
+                <div>
+                    <img src="Zombie.png" alt="Zombies">
+                    <h3>Zombies</h3>
+                    <p>A basic enemy in Minecraft. Armed with a sword or bare hand, zombies are slow close-range attackers.</p>
+                </div>
+                <div>
+                    <img src="Rotten-armor.png" alt="Rotten Armor">
+                    <h3>Rotten Armor</h3>
+                    <p>Armor crafted from zombie material dropped by zombies. Provides protection against melee attacks.</p>
+                </div>
+                <div>
+                    <img src="Rotten-sword.png" alt="Rotten Sword">
+                    <h3>Rotten Sword</h3>
+                    <p>A sword crafted from zombie material. Used to attack enemies from close range that deals high damage.</p>
+                </div>
+            </div>
+            <div id="ghouls" class="tabcontent">
+                <div>
+                    <img src="ghoul.png" alt="ghoul">
+                    <h3>Ghouls</h3>
+                    <p>Theses creatures... I hate them, don't trust them, don't contact them, dont...</p>
+                </div>
+            </div>
+            <div id="undead" class="tabcontent">
+                <div>
+                    <img src="undead.png" alt="Undead">
+                    <h3>The undead</h3>
+                    <p>Rotten to the bone or in the process, theses creatures are dangerous from a close and long distance, I would recommend holy weapons against such creatures!</p>
+                </div>
+            </div>
+            <div id="goblins" class="tabcontent">
+                <div>
+                    <img src="Goblin.png" alt="Goblin">
+                    <h3>Goblins</h3>
+                    <p>A vile and disgusting creature! Such an horrible smell, I wouldn't stay near him.</p>
+                </div>
+            </div>
+            <div id="sand_elemental" class="tabcontent">
+                <div>
+                    <img src="Sand_elemental.png" alt="Sand elemental">
+                    <h3>Sand elemental</h3>
+                    <p>A unique and rare creature only found in the hottest deserts, it has abilities of controlling the weather and the sand, this enemy should not be taken lightly of!</p>
+                </div>
+                <div>
+                    <img src="Desert_in_a_bottle.png" alt="Desert in a bottle">
+                    <h3>Desert in a bottle</h3>
+                    <p>An incredibly rare drops that allows you see thru the sand storms of the harsh desert if you have it in your inventory!</p>
+                </div>
+            </div>
+            <div id="forest_spirit" class="tabcontent">
+                <div>
+                    <img src="forest_spirit.png" alt="Forest spirit">
+                    <h3>Forest Spirit</h3>
+                    <p>A unique and rare creature only found in the darkest parts of the woods, it has abilities of controlling the weather and the sand, this enemy should not be taken lightly of!</p>
+                </div>
+                <div>
+                    <img src="Suspicous_stick.png" alt="A wierd... Stick">
+                    <h3>A wierd... Stick</h3>
+                    <p>A powerful spirit staff that shoots out the power of the forest, it can also be used for...</p>
+                </div>
+            </div>
+            <div id="ancient_heroes" class="tabcontent">
+                <div>
+                    <img src="ancient_hero.png" alt="Ancient Hero">
+                    <h3>Ancient hero</h3>
+                    <p>A hero, now dead, that has arosen for a lost civilations, now he's in a blind rage of the lost of his people and family, and once good heart, now blindless monster.</p>
+                </div>
+                <div>
+                    <img src="old_sword.png" alt="A rusty old sword">
+                    <h3>Rusty old sword</h3>
+                    <p>This is a old rusty sword, once used by a hero of forgotten age, this might be useful in the right place and time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openItem(evt, itemName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(itemName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
